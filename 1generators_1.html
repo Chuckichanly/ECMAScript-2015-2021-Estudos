@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <div id="teste"></div>
+    <script>
+
+      function* testeGenerator() {
+        console.log('Teste 1');
+        yield console.log('Teste 2');
+        console.log('Teste 3');
+
+        return 'Teste 4'
+      };
+
+      //yield executa a linha atual mas depois para, atua como uma pausa, para continuar só dar next de novo
+
+      let meuGenerator = testeGenerator(); //objeto iterator
+      console.log(meuGenerator)
+
+      meuGenerator.next(); 
+      console.log('--------')
+      meuGenerator.next(); 
+
+    </script>
+  </body>
+</html>
